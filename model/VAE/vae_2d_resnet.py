@@ -269,18 +269,17 @@ class VAERes2D(BaseModule):
         middd = z_sampled
         
         
-        ##
-        samples_array = np.load('/samples_array.npy') # 8 128 3 25 25
+        # ##
+        # samples_array = np.load('/samples_array.npy') # 8 128 3 25 25
 
-        samples_array = samples_array * 10  # sc
-        zz_sampled = torch.tensor(samples_array, device='cuda' if torch.cuda.is_available() else 'cpu')
+        # samples_array = samples_array * 10  # sc
+        # zz_sampled = torch.tensor(samples_array, device='cuda' if torch.cuda.is_available() else 'cpu')
 
-        z_sampled = zz_sampled
+        # z_sampled = zz_sampled
 
         
         logits = self.forward_decoder(z_sampled, x.shape)
         
-)
         output_dict.update({'logits': logits})
         output_dict.update({'middd': middd})
         if not self.training:
