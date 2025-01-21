@@ -65,7 +65,7 @@ def main(args):
 
 
     for file_name in file_names:
-        file_path = f'/step32-2/gt_mode-2/i_iter_{file_name}'
+        file_path = f'./out/sample/step32-2/gt_mode-2/i_iter_{file_name}'
         data = np.load(file_path)
         data_list.append(data)
 

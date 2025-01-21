@@ -220,7 +220,8 @@ def main(args):
             print(gggg.dtype)
             print("gggg",gggg.shape)
             gggg = gggg.astype(np.float32)
-            save_path = os.path.join("/step32-2/gt_mode/", f"i_iter_{i_iter_val}")
+            save_path = os.path.join("./out/sample/step32-2/gt_mode/", f"i_iter_{i_iter_val}")
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
             np.save(save_path, gggg) 
             #print("ggggggggg",type(gggg))
             #print("i_iter_val",i_iter_val)
@@ -239,7 +240,7 @@ def main(args):
             #print("middddddshape",result['middd'].shape)
             middd = result['middd'].cpu().numpy()
             middd = np.squeeze(middd)
-            save_path = os.path.join("/step32-2/token/", f"i_iter_{i_iter_val}")
+            save_path = os.path.join("./out/sample/step32-2/token/", f"i_iter_{i_iter_val}")
 
             np.save(save_path, middd) 
             

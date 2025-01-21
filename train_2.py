@@ -256,8 +256,8 @@ def main(args):
  
  
     
-    file1_path = '/step32-2/token/'
-    file2_path = '/step32-2/gt_mode-2/'
+    file1_path = './out/sample/step32-2/token/'
+    file2_path = './out/sample/step32-2/gt_mode-2/'
     
     dataset = CustomDataset(file1_path, file2_path)
 
